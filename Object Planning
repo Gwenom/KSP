@@ -17,8 +17,8 @@ Celestial Body
 
 Orbit
   -has a semi-major Axis
-  -has an Eccentricity
-  -has an Inclination
+  -has an eccentricity
+  -has an inclination
   -has argument of periapsis
   -has longitude of the ascending node
   -has default true anomaly as backup
