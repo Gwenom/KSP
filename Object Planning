@@ -1,0 +1,68 @@
+Object Ideas
+
+Celestial Body
+
+  Stuff
+  -has an orbit
+  -has gravitational parameters
+  -has a radius
+  -has a t=0 true anomaly
+  -has sidereal day length
+  -has a t=0 sidereal day
+  -may have moons
+  -may have a parent body
+  -may have an atmosphere
+
+  Functionality
+
+Orbit
+  -has a semi-major Axis
+  -has an Eccentricity
+  -has an Inclination
+  -has argument of periapsis
+  -has longitude of the ascending node
+  -has default true anomaly as backup
+
+  Functionality
+
+
+How do we handle states? States being the current position of the bodies in the solar system.
+
+Option 1: Attach the state info attached to the celestial body, and use functions in that object to update and change the state as needed
+  Option 1A: Have the state info as a variable for the celestial Body
+  Option 1B: Have the state info in the orbit object that each body has
+
+Option 2: Have a separate object that purely describes the state of the solar system
+  Option 2A: Use a state object that only has the information about the position of the celestial bodies
+  Option 2B: Use a solar system object that has planet objects
+
+
+We define the beginning of the sidereal day for a given body as when the vector from the center of the body through 0/0 matches that of a new game. Therefore the sidereal clock of a body will count up from 0 to its sidereal day length - 1.
+
+It therefore follows that we need to be able to retrieve this vector for each body. We will need the initial position of the body, which is known from the orbital values, and the
+
+Each body has its own cartesian coordinate system, with the X, Y, and Z axes being defined as follows:
+X: Defined by the vector from the center of the body to the latitude and longitude of 0,0 at t=0.
+Y: Defined by the vector from the center of the body to the body's north pole.
+Z: Defined by the X and Y axes
+
+
+
+
+
+
+  Spacecraft
+
+    Stuff
+    -has an Orbit
+    -has a parent celestial body
+    -may have stages
+    -has engine and fuel information for each stage
+    -has an inert Mass
+    -has t=0 fuel mass
+    -has a payload mass
+    -has a state vector
+
+    Functionality
+    -can burn to change the Orbit
+    -can do stages
